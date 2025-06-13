@@ -1,0 +1,13 @@
+path: datasets/kaist-rgbt
+train:
+- train_fold5.txt
+val:
+- val_fold5.txt
+test:
+- test-all-20.txt
+nc: 4
+names:
+  0: person
+  1: cyclist
+  2: people
+  3: person?
