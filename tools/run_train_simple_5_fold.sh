@@ -9,12 +9,12 @@ for F in {1..5}; do
 
   # 2) 그 다음 train_simple 돌리기
   python train_simple.py \
-    --img 640 --batch-size 4 --epochs 20 \
+    --img 640 --batch-size 16 --epochs 20 \
     --data data/kaist-rgbt-fold${F}.yaml \
-    --cfg models/yolov5s_kaist-rgbt.yaml \
-    --weights yolov5s.pt \
-    --workers 2 \
-    --name "yolov5s-rgbt-fold${F}_ver4" \
+    --cfg models/yolov5n_kaist-rgbt.yaml \
+    --weights yolov5n.pt \
+    --workers 8 \
+    --name "yolov5n-rgbt-fold${F}_ver6" \
     --entity "$WANDB_ENTITY" \
     --rgbt --single-cls
 done

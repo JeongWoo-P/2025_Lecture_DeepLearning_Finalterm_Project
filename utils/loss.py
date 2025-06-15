@@ -130,7 +130,7 @@ class ComputeLoss:
         self.nl = m.nl  # number of layers
         self.anchors = m.anchors
         self.device = device
-        self.center_weight = h.get("center_weight", 0.05)
+        self.center_weight = h.get("center_weight", 0.1)
 
     def __call__(self, p, targets):  # predictions, targets
         """Performs forward pass, calculating class, box, and object loss for given predictions and targets."""

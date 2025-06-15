@@ -76,7 +76,7 @@ def main():
     coco_gt = load_and_fix_gt(Val_PATH)
 
     for fold in range(1, 6):
-        pred_path = Path(f"/home/jeongwoo/AUE8088/runs/train/val_train_ver3_fold{fold}_last/epochNone_predictions.json")
+        pred_path = Path(f"/home/jeongwoo/AUE8088/runs/train/val_train_ver6_fold{fold}_last/epochNone_predictions.json")
         if not pred_path.exists():
             print(f"[WARN] Predictions not found for fold {fold}: {pred_path}")
             continue
@@ -87,7 +87,7 @@ def main():
         evaluate(coco_gt, coco_dt, iou_thr=0.50)
 
     for fold in range(1, 6):
-        pred_path = Path(f"/home/jeongwoo/AUE8088/runs/train/val_train_ver3_fold{fold}_best/epochNone_predictions.json")
+        pred_path = Path(f"/home/jeongwoo/AUE8088/runs/train/val_train_ver6_fold{fold}_best/epochNone_predictions.json")
         if not pred_path.exists():
             print(f"[WARN] Predictions not found for fold {fold}: {pred_path}")
             continue
@@ -98,7 +98,7 @@ def main():
         evaluate(coco_gt, coco_dt, iou_thr=0.50)
         
     # 2) 고정 Best 경로 평가
-    best_path = Path("/home/jeongwoo/AUE8088/runs/train/val_train_ver3_fold1_best/epochNone_predictions.json")
+    best_path = Path("/home/jeongwoo/AUE8088/runs/train/val_train_ver3_fold1_best/ctr_Adam.json")
     print(f"\n===== 고정 Best 평가 시작 =====")
     if not best_path.exists():
         print(f"[ERROR] Best predictions not found: {best_path}")
