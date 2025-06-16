@@ -8,7 +8,7 @@ cd /home/jeongwoo/AUE8088
 for F in {1..5}; do
   for CKPT in best last; do
     NAME="val_train_ver6_fold${F}_${CKPT}"
-    WEIGHTS="/home/jeongwoo/AUE8088/runs/train/yolov5n-rgbt-fold${F}_ver6/weights/${CKPT}.pt"
+    WEIGHTS="/home/jeongwoo/AUE8088/runs/train/yolov5n-rgbt-fold${F}_ver7/weights/${CKPT}.pt"
     echo ">>> Running fold ${F} (${CKPT}) → --name ${NAME}"
     python val_custom.py \
       --img 640 \

@@ -76,7 +76,7 @@ def main():
     coco_gt = load_and_fix_gt(Val_PATH)
 
     for fold in range(1, 6):
-        pred_path = Path(f"/home/jeongwoo/AUE8088/runs/train/val_train_ver6_fold{fold}_last/epochNone_predictions.json")
+        pred_path = Path(f"/home/jeongwoo/AUE8088/runs/train/val_train_ver6_fold{fold}_last2/epochNone_predictions.json")
         if not pred_path.exists():
             print(f"[WARN] Predictions not found for fold {fold}: {pred_path}")
             continue
@@ -87,7 +87,7 @@ def main():
         evaluate(coco_gt, coco_dt, iou_thr=0.50)
 
     for fold in range(1, 6):
-        pred_path = Path(f"/home/jeongwoo/AUE8088/runs/train/val_train_ver6_fold{fold}_best/epochNone_predictions.json")
+        pred_path = Path(f"/home/jeongwoo/AUE8088/runs/train/val_train_ver6_fold{fold}_best2/epochNone_predictions.json")
         if not pred_path.exists():
             print(f"[WARN] Predictions not found for fold {fold}: {pred_path}")
             continue
